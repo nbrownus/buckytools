@@ -105,7 +105,7 @@ func isHealthy(master *hashing.JSONRingType, ring []*hashing.JSONRingType) bool 
 	// XXX: Take replicas into account
 	// The initial buckyd daemon isn't in the ring, so we need to add 1
 	// to the length.
-	if len(master.Nodes) != len(ring)+1 {
+	if len(master.Nodes) != len(ring) {
 		return false
 	}
 
